@@ -2,7 +2,6 @@
 
 TUNNEL_PORT=
 REMOTE_HOST=
-COMMAND="${1:='off'}"
 SHOULD_RUN=true
 
 function cleanup {
@@ -13,8 +12,6 @@ function cleanup {
 }
 
 trap cleanup EXIT
-
-echo "COMMAND=${COMMAND}"
 
 networksetup -setsocksfirewallproxystate Wi-Fi on
 
